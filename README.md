@@ -8,7 +8,7 @@ I present to you a very basic GAN+VAE model inspired by Hardmaru's incredible bl
 
 I've tested the model in python 3.1 and tensorflow 2.1. Also make sure numpy and matplotlib is installed in your computer.
 
-![Handwritten Digit Generation](https://user-images.githubusercontent.com/74816223/201641046-2b99337a-433c-4427-a81f-da89bc7fe257.gif)
+![Handwritten_Digit_Generation](https://user-images.githubusercontent.com/74816223/201645277-99f4ff5e-6143-47cd-865c-bf22b384ab45.gif)
 ![13x13_GeneratedDigits](https://user-images.githubusercontent.com/74816223/201643032-97686499-1205-42ef-8a6b-7c54a00083d6.png)
 
 ## Generative Adversarial Network - GAN
