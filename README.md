@@ -14,7 +14,8 @@ I've tested the model in python 3.1 and tensorflow 2.1. Also make sure numpy and
 ## Generative Adversarial Network - GAN
 [Generative adversarial network](https://www.wikiwand.com/en/Generative_adversarial_network) or GAN for short is one of many generative models out there. This is where I personally started with image generation because The architecture is intuitive enough to understand and get a sense of what's going on behind the scenes, and complex enough to do some cool stuff.   
 In a nutshell, There are 2 models, The generator and the discriminator. The generator generates an image, the discriminator then takes that generated image and an image from the dataset, and learns to discriminate between them. The job of the generator is to fool the discriminator into thinking that the generated image is from the dataset, and the discriminator's job is to successfully distinguish between them.  
-The intricately choreographed dance between these two models is what helps them learn and become better at their job. Isn't it beautiful?  
+The intricately choreographed dance between these two models is what helps them learn and become better at their job.  
+Isn't it beautiful?  
 I think it is.  
 
 ## Variational Autoencoder - VAE
