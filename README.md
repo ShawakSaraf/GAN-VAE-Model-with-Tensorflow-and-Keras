@@ -1,7 +1,7 @@
 # GAN+VAE with Tensorflow and Keras
-This is my foray into the world of Generative Models.
 I present to you a very basic GAN+VAE model inspired by Hardmaru's incredible blog,
-["Generating Large Images from Latent Vectors"](https://blog.otoro.net/2016/04/01/generating-large-images-from-latent-vectors/) .  
+["Generating Large Images from Latent Vectors"](https://blog.otoro.net/2016/04/01/generating-large-images-from-latent-vectors/) . I also used official Keras examples of [Deep convolutional generative adversarial network](https://keras.io/examples/generative/dcgan_overriding_train_step/) and [Variational AutoEncoder](https://keras.io/examples/generative/vae/) as refrences.  
+This is my foray into the world of Generative Models.
 
 • GANVAE_Model.py includes all the models and training algorithm to integrate and optimize all the models while training.  
 • Run.py script is where you can train the model and generate images.  
