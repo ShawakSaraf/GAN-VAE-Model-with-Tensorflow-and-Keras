@@ -18,5 +18,5 @@ The intricately choreographed dance between these two models is what helps them 
 Isn't it beautiful?  
 I think it is.  
 
-## Variational Autoencoder - VAE
-[Variational Autoencoder](https://www.wikiwand.com/en/Variational_autoencoder) or VAE is another generative model used to, well, generate images. It takes the images from the dataset and compress them down to a vector, the so call Latent Vector or Latent Space. We've combined VAE with GAN to generate handwritten digits.
+## Variational AutoEncoder - VAE
+[Variational AutoEncoder](https://www.wikiwand.com/en/Variational_autoencoder) or VAE is another generative model used to, well, generate images. It takes the images from the dataset and compress them down into a vector, the so call Latent Vector or Latent Space. By modifying the latent vector we can produce varied and interesting images. We've combined VAE with GAN to generate handwritten digits.
