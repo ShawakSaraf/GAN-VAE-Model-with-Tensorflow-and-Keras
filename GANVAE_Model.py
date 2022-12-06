@@ -11,20 +11,20 @@ curr_path = os.path.dirname( os.path.abspath( __file__ ) )
 gen_imgs_file                 = curr_path+'/SampleImages/img_{}%03d.png'.format( time.strftime( '%H%M%S' ) )
 discriminator_savedModel_file = curr_path+'/TrainedModels/Discriminator_Trained_Model'
 generator_savedModel_file     = curr_path+'/TrainedModels/Generator_Trained_Model'
-vae_encoder_savedModel_file   = curr_path+'/TrainedModels/VAE_Encoder_Trained_Model'
+vae_savedModel_file           = curr_path+'/TrainedModels/VAE_Trained_Model'
 
 class GANVAE( keras.Model ):
    def __init__(
-         self,
-         encoder       = None,
-         generator     = None,
-         discriminator = None,
-         input_shape   = ( 28,28,1 ),
-         z_dim         = 128,
-         g_trainMul    =  1,
-         d_thresh_low  = 0,
-         d_thresh_high = 1
-      ):
+      self,
+      encoder       = None,
+      generator     = None,
+      discriminator = None,
+      input_shape   = ( 28,28,1 ),
+      z_dim         = 128,
+      g_trainMul    =  1,
+      d_thresh_low  = 0,
+      d_thresh_high = 1
+   ):
       super(GANVAE, self).__init__()
       """
       ENCODER: Encoder takes in an image from dataset as input, and tries to compress all of that
@@ -170,7 +170,7 @@ class Monitor( keras.callbacks.Callback ):
       if self.save_model:
          self.model.discriminator.save( discriminator_savedModel_file )
          self.model.generator.save( generator_savedModel_file )
-         self.model.encoder.save( vae_encoder_savedModel_file )
+         self.model.encoder.save( vae_savedModel_file )
 
       if self.save_imgs:
          generate_images(
@@ -310,7 +310,7 @@ def generate_images(
       plt.show()
 
 def load_trained_models():
-   encoder       = keras.models.load_model( vae_encoder_savedModel_file )
+   encoder       = keras.models.load_model( vae_savedModel_file )
    generator     = keras.models.load_model( generator_savedModel_file )
    discriminator = keras.models.load_model( discriminator_savedModel_file )
    return encoder, generator, discriminator
