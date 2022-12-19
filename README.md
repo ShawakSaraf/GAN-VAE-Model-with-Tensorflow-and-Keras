@@ -20,3 +20,29 @@ I think it is.
 
 ## Variational AutoEncoder - VAE
 [Variational AutoEncoder](https://www.wikiwand.com/en/Variational_autoencoder) or VAE is another generative model used to, well, generate images. It takes the images from the dataset and compress them down into a vector, the so call Latent Vector or Latent Space. By modifying the latent vector we can produce varied and interesting images. We've combined VAE with GAN to generate handwritten digits.
+
+## Usage
+To use the GANVAE model, you will need to instantiate it and pass in the desired input shape, latent dimension. You can also pass in pre-defined discriminator, generator, and encoder models, or use the deault trained ones provided (but make sure z_dim is 128).
+```
+model = GANVAE(input_shape=(28, 28, 1), z_dim=128)
+```
+Once the model is instantiated, you can compile it by specifying the optimizers, as well as the loss function to be used.
+```
+model.compile(
+  optimizer=keras.optimizers.Adam(),
+  loss_fn=keras.losses.BinaryCrossentropy()
+)
+```
+You can then use the model to fit on training data and evaluate its performance. You can also use callbacks, such as the Monitor callback provided in the code, to save generated images and model checkpoints during training.  
+To generate new images, you can use the generate_images function provided. This function takes in a generator model, latent dimension, and various parameters for generating and plotting the images.
+```
+GANVAE_Model.generate_images(
+	generator,
+	z_dim = z_dim,
+	num_img_sqr = 10,
+	figsize     = 10,
+	img_size    = input_shape,
+	save        = True,
+	plot        = False
+)
+```
