@@ -27,6 +27,8 @@ class GANVAE( keras.Model ):
    ):
       super(GANVAE, self).__init__()
       """
+      Initialize the GANVAE model with the following parameters:
+
       ENCODER: Encoder takes in an image from dataset as input, and tries to compress all of that
          dense information down into a vector — so called "Latent vector" or "Latent space" — the
          dimension on which is denoted by "z_dim".
@@ -59,6 +61,8 @@ class GANVAE( keras.Model ):
    def compile( self, optimizer, loss_fn ):
       super(GANVAE, self).compile(run_eagerly=True)
       """
+      Compile the GANVAE model with the specified optimizer and loss function.
+      
       OPTIMIZER: Think of the optimizer as just an algorithm that shows our models the way
          towards the best possible result we're looking for.
       LOSS_FN: Loss function tells the optimizer if it's going in the right direction.
