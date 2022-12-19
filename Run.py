@@ -15,7 +15,6 @@ TRAIN_MODEL    = False
 EPOCHS         = 50
 BATCH_SIZE     = 32
 z_dim          = 128
-g_trainMul     = 1
 init_lr_rate   = 3*10**-4
 lr_decay_steps = 10**3
 lr_decay_rate  = 0.98
@@ -42,7 +41,7 @@ if TRAIN_MODEL:
 		encoder=encoder, generator=generator, discriminator=discriminator,
 		input_shape   = input_shape,
 		z_dim         = z_dim,
-		g_trainMul    = g_trainMul,
+		g_trainMul    = 1,	# Generator training multiplier
 		d_thresh_low  = 0.55,
 		d_thresh_high = 0.75
 	)
