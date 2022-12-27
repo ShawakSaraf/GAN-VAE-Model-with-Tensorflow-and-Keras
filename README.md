@@ -23,11 +23,11 @@ I think it is.
 
 ## Usage
 To use the GANVAE model, you will need to instantiate it and pass in the desired input shape, latent dimension. You can also pass in pre-defined discriminator, generator, and encoder models, or use the deault trained ones provided (but make sure z_dim is 128).
-```
+```python
 model = GANVAE(input_shape=(28, 28, 1), z_dim=128)
 ```
 Once the model is instantiated, you can compile it by specifying the optimizers, as well as the loss function to be used.
-```
+```python
 model.compile(
   optimizer=keras.optimizers.Adam(),
   loss_fn=keras.losses.BinaryCrossentropy()
@@ -35,7 +35,7 @@ model.compile(
 ```
 You can then use the model to fit on training data and evaluate its performance. You can also use callbacks, such as the Monitor callback provided in the code, to save generated images and model checkpoints during training.  
 To generate new images, you can use the generate_images function provided. This function takes in a generator model, latent dimension, and various parameters for generating and plotting the images.
-```
+```python
 GANVAE_Model.generate_images(
 	generator,
 	z_dim = z_dim,
