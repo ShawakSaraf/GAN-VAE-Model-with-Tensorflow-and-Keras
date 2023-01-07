@@ -1,4 +1,12 @@
-# GAN+VAE with Tensorflow and Keras
+<h1 align=center> GAN+VAE with Tensorflow and Keras</h1>
+
+<p align="center">
+	<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/></a>
+	<a href="https://numpy.org/"><img src="https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white"/></a>
+	<a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/></a>
+	<a href="https://keras.io/"><img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white"/></a>
+</p>
+
 I present to you a very basic GAN+VAE model inspired by Hardmaru's incredible blog,
 ["Generating Large Images from Latent Vectors"](https://blog.otoro.net/2016/04/01/generating-large-images-from-latent-vectors/) . I also used official Keras examples of [Deep convolutional generative adversarial network](https://keras.io/examples/generative/dcgan_overriding_train_step/) and [Variational AutoEncoder](https://keras.io/examples/generative/vae/) as refrences.  
 This is my foray into the world of Generative Models.
@@ -9,11 +17,9 @@ This is my foray into the world of Generative Models.
 I've tested the model in python 3.1 and tensorflow 2.1. Also make sure numpy and matplotlib are installed in your computer.
 <figure>
 	<p align="center">
-		<img style="border-radius: 10px;" src="https://user-images.githubusercontent.com/74816223/201645277-99f4ff5e-6143-47cd-865c-bf22b384ab45.gif"/>
-		<img style="border-radius: 10px;" src="https://user-images.githubusercontent.com/74816223/201643032-97686499-1205-42ef-8a6b-7c54a00083d6.png"/>
+		<img src="https://user-images.githubusercontent.com/74816223/201645277-99f4ff5e-6143-47cd-865c-bf22b384ab45.gif"/>
+		<img src="https://user-images.githubusercontent.com/74816223/201643032-97686499-1205-42ef-8a6b-7c54a00083d6.png"/>
 </figure>
-	
-
 
 ## Generative Adversarial Network - GAN
 [Generative adversarial network](https://www.wikiwand.com/en/Generative_adversarial_network) or GAN for short is one of many generative models out there. This is where I personally started with image generation because The architecture is intuitive enough to understand and get a sense of what's going on behind the scenes, and complex enough to do some cool stuff.   
